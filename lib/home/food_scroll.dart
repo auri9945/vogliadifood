@@ -3,20 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:vogliadifood/utils/colors.dart';
 
 class FoodScroll extends StatefulWidget {
-  PageController pageController = PageController(viewportFraction: 0.85);
-  //const FoodScroll({Key? key}) : super(key: key);
+  const FoodScroll({Key? key}) : super(key: key);
 
   @override
   _FoodScrollState createState() => _FoodScrollState();
 }
 
 class _FoodScrollState extends State<FoodScroll> {
+  PageController pageController = PageController(viewportFraction: 0.85);
   @override
   Widget build(BuildContext context) {
     return Container(
     height: 320,
       child: PageView.builder(
-        // errore controller: pageController,
+        controller: pageController,
         itemCount: 5,
         itemBuilder: (context, position){
           return _buildPageItem(position);

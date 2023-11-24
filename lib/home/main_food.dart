@@ -22,13 +22,13 @@ class _MainFoodState extends State<MainFood> {
 
       child: Container(
       margin: EdgeInsets.only(top:70, bottom:15),
-      padding: EdgeInsets.only(left: 20, right:20),
+      padding: EdgeInsets.only(left: 2, right:20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children:[
           Column(
             children: [
-              Image(image: ResizeImage(AssetImage("assets/image/logonavred.png"), width: 190, height: 40)),
+              Image(image: ResizeImage(AssetImage("assets/image/namerosso.png"), width: 190, height: 60)),
             ],
           ),
 
