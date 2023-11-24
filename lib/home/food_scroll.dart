@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vogliadifood/utils/colors.dart';
+import 'package:vogliadifood/widgets/big_text.dart';
 
 class FoodScroll extends StatefulWidget {
   const FoodScroll({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class _FoodScrollState extends State<FoodScroll> {
     height: 320,
       child: PageView.builder(
         controller: pageController,
-        itemCount: 5,
+        itemCount: 3,//per pagine di scroll
         itemBuilder: (context, position){
           return _buildPageItem(position);
 
@@ -48,7 +49,18 @@ class _FoodScrollState extends State<FoodScroll> {
                   borderRadius: BorderRadius.circular(30),
                   color: AppColors.Orange,
 
-    )),),
+    ),
+           child: Container(
+             padding: EdgeInsets.only(top:10, left:15, right: 15),
+             child: Column(
+               children: [
+                 BigText(text: "Zuppa vera Italia"),
+
+               ],
+             ),)
+           ),
+
+         ),
 
         ]
     );
