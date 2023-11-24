@@ -28,7 +28,7 @@ class _MainFoodState extends State<MainFood> {
         children:[
           Column(
             children: [
-              Image(image: ResizeImage(AssetImage("assets/image/logoara.png"), width: 190, height: 40)),
+              Image(image: ResizeImage(AssetImage("assets/image/logonavred.png"), width: 190, height: 40)),
             ],
           ),
 
@@ -39,7 +39,7 @@ class _MainFoodState extends State<MainFood> {
             child: Icon(Icons.search, color:Colors.white),
             decoration: BoxDecoration (
               borderRadius: BorderRadius.circular(15),
-              color: AppColors.Orange,
+              color: AppColors.Rosso,
             ),
           ),
          )
