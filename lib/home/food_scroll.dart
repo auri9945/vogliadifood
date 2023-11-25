@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vogliadifood/utils/colors.dart';
 import 'package:vogliadifood/widgets/big_text.dart';
+import 'package:vogliadifood/widgets/small_text.dart';
 
 class FoodScroll extends StatefulWidget {
   const FoodScroll({Key? key}) : super(key: key);
@@ -43,19 +44,32 @@ class _FoodScrollState extends State<FoodScroll> {
          Align(
            alignment: Alignment.bottomCenter,
            child: Container(
-              height: 140,
+              height: 150,
               margin: EdgeInsets.only(left:40, right: 40, bottom: 15),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
-                  color: AppColors.Orange,
+                  color: AppColors.Sfondo,
+
 
     ),
            child: Container(
-             padding: EdgeInsets.only(top:10, left:15, right: 15),
+             width: 250,
+             padding: EdgeInsets.only(top:20, left:30, right: 30),
              child: Column(
                children: [
                  BigText(text: "Zuppa vera Italia"),
+                   SizedBox(height: 10,
+                   ),
 
+                 SmallText(text:'Questo ristorante ha soddisfatto la voglia di: 200 persone'),
+
+                 Row(
+                   children: [
+                     Wrap(
+                       children: List.generate(5, (index) => Icon(Icons.favorite_border_outlined, color: AppColors.Rosso, size: 23,))
+                     )
+                   ],
+                 )
                ],
              ),)
            ),

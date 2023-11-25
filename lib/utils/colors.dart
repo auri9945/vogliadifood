@@ -6,6 +6,7 @@ class AppColors{
   static final Color Rosso = const Color(0xFFEB1000);
   static final Color Text = const Color(0xFF08090E);
   static final Color Sfondo = const Color(0xFFFBF5F3);
+  static final Color Grigio = const Color(0xFF8A9597);
 
   // static final Color iconColor1 = const Color();
   // static final Color iconColor = const Color();
