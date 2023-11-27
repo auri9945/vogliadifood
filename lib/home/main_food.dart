@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vogliadifood/home/food_scroll.dart';
 import 'package:vogliadifood/utils/colors.dart';
+import 'package:vogliadifood/widgets/big_text.dart';
 
 class MainFood extends StatefulWidget {
   const MainFood({Key? key}) : super(key: key);
@@ -47,7 +48,19 @@ class _MainFoodState extends State<MainFood> {
       ),
     ),
     ),
-    FoodScroll(),
+    Container(
+      margin: EdgeInsets.only(left:40, right: 40, bottom: 10),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Text("Most popular"),
+              SizedBox(height: 50,)
+            ],
+          ),
+        ],),
+    ),
+         FoodScroll(),
        ],
       ),
     );
