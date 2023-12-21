@@ -22,7 +22,8 @@ class FoodScroll extends StatefulWidget {
 class _FoodScrollState extends State<FoodScroll> {
   PageController pageController = PageController(viewportFraction: 0.85);
   var _currPageValue=0.0;
-  /*double _height=Dimensions.pageViewContainer;*/
+  double scaleFactor=0.8;
+  double _height=Dimensions.pageViewContainer;
   @override
   void initState(){
     super.initState();
@@ -38,7 +39,7 @@ class _FoodScrollState extends State<FoodScroll> {
     return Column(
       children: [
         Container(
-          height: 320,
+          height: Dimensions.pageView,
           child: PageView.builder(
               controller: pageController,
               itemCount: 3,//per pagine di scroll
@@ -53,7 +54,7 @@ class _FoodScrollState extends State<FoodScroll> {
           activeColor: AppColors.Grigio,
           size: const Size.square(9.0),
           activeSize: const Size(18.0, 9.0),
-          activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
+          activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Dimensions.radius15)),
         ),
         ),
 
@@ -115,9 +116,9 @@ class _FoodScrollState extends State<FoodScroll> {
         children:[
           Container(
           height: Dimensions.pageViewContainer,
-          margin: EdgeInsets.only(left:5, right: 5),
+          margin: EdgeInsets.only(left:Dimensions.width5, right: Dimensions.width5),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(Dimensions.radius30),
               color: index.isEven?Color(0xFFED9831):Color(0xFFEfB1000),
               image: DecorationImage(
                   fit: BoxFit.cover,
@@ -128,9 +129,9 @@ class _FoodScrollState extends State<FoodScroll> {
            alignment: Alignment.bottomCenter,
            child: Container(
               height: Dimensions.pageViewTextContainer,
-              margin: EdgeInsets.only(left:40, right: 40, bottom: 30),
+              margin: EdgeInsets.only(left:Dimensions.width40, right: Dimensions.width40, bottom: Dimensions.height30),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(Dimensions.radius30),
                   color: AppColors.Sfondo,
                 boxShadow: [
                   BoxShadow(
@@ -151,15 +152,14 @@ class _FoodScrollState extends State<FoodScroll> {
 
     ),
            child: Container(
-             width: 300,
+             width: 320,
              alignment: Alignment.center,
-             padding: EdgeInsets.only(top:15, left:20, right: 20),
+             padding: EdgeInsets.only(top:Dimensions.height15, left:15, right: 15),
              child: Column(
                crossAxisAlignment: CrossAxisAlignment.center,
                children: [
                  BigText(text: "Zuppa vera Italia"),
-                   SizedBox(height: 10,),
-
+                   SizedBox(height: Dimensions.height10,),
 
                  Row(
                    children: [
@@ -174,10 +174,10 @@ class _FoodScrollState extends State<FoodScroll> {
                      SmallText(text: "recensioni"),
                    ],),
 
-                 // possiamo rimetterlo sotto Bixtext è solo una prova
-                 SizedBox(height: 10,),
-                 SmallText(text:' ha soddisfatto la voglia di: 200 persone'),
-                 SizedBox(height: 10,),
+                 // ho commentato per vedere s emi dava errori di spazio, ma ovviamente togliendolo non mi da errori
+                 // SizedBox(height: Dimensions.height10,),
+                 // SmallText(text:' ha soddisfatto la voglia di: 200 persone'),
+                 SizedBox(height: Dimensions.height20,),
                  Row(
                    children: [
                      IconAndTextWidget(

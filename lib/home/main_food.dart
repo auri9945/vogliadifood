@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vogliadifood/home/food_scroll.dart';
 import 'package:vogliadifood/utils/colors.dart';
-import 'package:vogliadifood/widgets/big_text.dart';
 
 class MainFood extends StatefulWidget {
   const MainFood({Key? key}) : super(key: key);
